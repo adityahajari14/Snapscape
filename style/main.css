@@ -137,7 +137,7 @@ div.hero-text{
     grid-row-end: span calc(var(--image-height) / 10);
     overflow: hidden;
     border-radius: 16px;
-    padding: 5px;
+    margin: 5px;
 }
 
 .image-container img {
