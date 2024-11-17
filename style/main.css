@@ -31,7 +31,14 @@ header{
     flex-direction: row;
     column-gap: 30px;
     align-items: center;
-    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -44,12 +51,12 @@ header{
     flex-direction: row;
     align-items: center;
     background-color: #39B3FE;
-    padding: 10px 20px;
+    padding: 0.6rem 1.2rem;
     border-radius: 10px;
     color: white;
     text-align: center;
     border: 0px;
-    font-size: 20px;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -59,6 +66,27 @@ header{
     height: 45px;
     border-radius: 50%;
 }
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
 
 /* Hero section */
 
@@ -119,6 +147,7 @@ div.hero-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 10vh;
 }
 
 .image-section-heading{
@@ -145,4 +174,92 @@ div.hero-text{
     height: auto;
     display: block;
     border-radius: 16px;
+}
+
+footer{
+    background-color: #7AD0FF6B;
+    text-align: center;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyright{
+    margin: 0;
+    color: #555555;
+    font-size: 1.2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .logo {
+        width: 30vw;
+    }
+
+    .menu-icon {
+        display: flex;
+        z-index: 1000;
+    }
+
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(230, 243, 255, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        z-index: 999;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu .menu-items {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #555555;
+    }
+
+    .mobile-menu .create-button {
+        margin-top: 1rem;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .profile-image {
+        display: none;
+    }
+
+    .menu-icon {
+        order: 1;
+    }
+
+    .expand-your-mind {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
 }

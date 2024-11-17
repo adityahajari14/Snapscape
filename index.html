@@ -13,12 +13,19 @@
     <section class="hero">
         <header>
             <img class="logo" src="assets/images/hero_logo.webp" alt="">
-            <nav class="menu">
-                <div class="menu-items">All Image</div>
-                <div class="menu-items">Category</div>
-                <button class="create-button"><svg width="20" height="20" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 6.04166V22.9583M6.04166 14.5H22.9583" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>  Create</button>
+            <div class="menu">
+                <button id="menu-toggle" class="menu-icon" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="mobile-menu" class="mobile-menu">
+                    <div class="menu-items">All Image</div>
+                    <div class="menu-items">Category</div>
+                    <button class="create-button"><svg width="20" height="20" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 6.04166V22.9583M6.04166 14.5H22.9583" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>  Create</button>
+                </nav>
                 <div class="profile-image"><img src="assets/images/profile-image.webp" alt=""></div>
-            </nav>
+            </div>
         </header>
 
         <div class="hero-text">
@@ -62,6 +69,10 @@
             <div class="image-container"><img src="assets/photos/Gojo Saturo wallpaper 🔥.jpg" alt="" srcset=""></div>  
         </div>
     </section>
+
+    <footer>
+        <p class="copyright">&copy; 2024 Snapscape All Rights Reserved.</p>
+    </footer>
         
     <script>
         document.querySelectorAll('.image-container img').forEach(img => {
@@ -74,6 +85,15 @@
                         img.onload();
                     }
                 });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
