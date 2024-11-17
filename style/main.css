@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", serif;
+}
+
+.hero{
+    background-color: #79d0ff6b;
+    width: 100%;
+    height: auto;
+}
+
+/* Header */
+
+header{
+    height: 10vh;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 15vw;
+    height: fit-content;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu-items{
+    color: #555555;
+}
+
+.create-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #39B3FE;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.profile-image img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Hero section */
+
+div.hero-text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expand-your-mind{
+    font-weight: 700;
+    font-size: 4em;
+    margin: 28px;
+}
+
+.hero-description{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0 0 28px 0;
+}
+
+.search-box{
+    display: flex;
+    margin: 0 0 28px 0;
+}
+
+.search-input {
+    width: 30vw;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 0;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #39B3FE;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+/* Image section */
+
+.image-section{
+    padding: 0 10vw 0 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-section-heading{
+    text-align: center;
+}
+
+.images {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-rows: 10px;
+}
+
+.image-container {
+    display: block;
+    grid-row-end: span calc(var(--image-height) / 10);
+    overflow: hidden;
+    border-radius: 16px;
+    padding: 5px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
